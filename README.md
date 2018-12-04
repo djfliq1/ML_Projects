@@ -1,2 +1,3 @@
 # ML_Projects
-All my Machine Learning Projects
+Job fitting using ML and your personal resume.
+This is an ongoing project.
