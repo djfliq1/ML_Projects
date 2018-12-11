@@ -36,7 +36,7 @@ def main():
             when_to_stop = abs(int(set_time))
 
             #test.csv file is used as the file to be updated.
-            with open("../tester.csv", 'a') as csv_file:
+            with open("./tester.csv", 'a') as csv_file:
                 csv_reader = csv.reader(csv_file)
                 csv_writer = csv.writer(csv_file, delimiter='\t')
 
@@ -50,7 +50,7 @@ def main():
 
     while True:
         # adds the two files to be committed
-        subprocess.call("git add TimerTime.py ../tester.csv ../README.md", shell=True)
+        subprocess.call("git add TimerTime.py ./tester.csv ./README.md", shell=True)
         # These timers just help slow the process down so there aren't any overlapping of processes
         time.sleep(1)
         # The commit to GitHub
@@ -61,7 +61,7 @@ def main():
         time.sleep(1)
         # Checks the csv file to see if the line count is m20 or more so it knows
         # when to erase the file and start over
-        d_data = open("../tester.csv", 'r')
+        d_data = open("./tester.csv", 'r')
         data = d_data.read()
         numOfLines = len(data.splitlines())
         # Have to make sure you close the csv file or neither of the definitions will work correctly
