@@ -57,11 +57,11 @@ def main():
         subprocess.call("git commit -m 'AutomatedPushComplete'", shell=True)
         time.sleep(2)
         # Pushes the update to the repository
-        subprocess.call('git push ML_Project', shell=True)
+        subprocess.call('git push origin', shell=True)
         time.sleep(1)
         # Checks the csv file to see if the line count is m20 or more so it knows
         # when to erase the file and start over
-        d_data = open("../test.csv", 'r')
+        d_data = open("../tester.csv", 'r')
         data = d_data.read()
         numOfLines = len(data.splitlines())
         # Have to make sure you close the csv file or neither of the definitions will work correctly
