@@ -1,3 +1,2 @@
 # ML_Projects
-Job fitting using ML and your personal resume.
-This is an ongoing project.
+I am trying to figure out a good project to do using ML. Soon as I have one I will update it here.
