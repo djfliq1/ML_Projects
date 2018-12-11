@@ -12,11 +12,11 @@ def main():
         """
         try:
             # A test.csv file is used as the file to be updated.
-            with open("../test.csv", 'w') as csv_file:
+            with open("../tester.csv", 'w') as csv_file:
 
                 dataR = csv_file.read()
                 dataR_set = set(dataR)
-                clean_file = open("../test.csv", 'r+')
+                clean_file = open("../tester.csv", 'r+')
 
             for line in dataR_set:
                 clean_file.write(line)
@@ -36,7 +36,7 @@ def main():
             when_to_stop = abs(int(set_time))
 
             #test.csv file is used as the file to be updated.
-            with open("../test.csv", 'a') as csv_file:
+            with open("../tester.csv", 'a') as csv_file:
                 csv_reader = csv.reader(csv_file)
                 csv_writer = csv.writer(csv_file, delimiter='\t')
 
@@ -50,14 +50,14 @@ def main():
 
     while True:
         # adds the two files to be committed
-        subprocess.call("git add TimerMain.py ../test.csv ../README.md roboPiper.py", shell=True)
+        subprocess.call("git add TimerTime.py ../tester.csv ../README.md", shell=True)
         # These timers just help slow the process down so there aren't any overlapping of processes
         time.sleep(1)
         # The commit to GitHub
         subprocess.call("git commit -m 'AutomatedPushComplete'", shell=True)
         time.sleep(2)
         # Pushes the update to the repository
-        subprocess.call('git push origin', shell=True)
+        subprocess.call('git push ML_Project', shell=True)
         time.sleep(1)
         # Checks the csv file to see if the line count is m20 or more so it knows
         # when to erase the file and start over
