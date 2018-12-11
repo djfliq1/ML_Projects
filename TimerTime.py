@@ -75,7 +75,7 @@ def main():
         time.sleep(1)
 
         # This is the countdown timer, in seconds. Here is where you set how often you want to update your repository
-        set_time = 7200
+        set_time = 10800
         when_to_stop = abs(int(set_time))
 
         # Below is the structure of the countdown timer and how it will display in your terminal
